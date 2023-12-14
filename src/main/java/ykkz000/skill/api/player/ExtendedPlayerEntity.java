@@ -16,13 +16,14 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package ykkz000.skill.api;
+package ykkz000.skill.api.player;
 
-import ykkz000.skill.player.ExtendedPlayerState;
+import net.minecraft.util.Identifier;
 
 public interface ExtendedPlayerEntity {
     default ExtendedPlayerState getExtendedPlayerState() {
         return new ExtendedPlayerState();
     }
     default void setExtendedPlayerState(ExtendedPlayerState state) {}
+    default void useSkill(Identifier id) {}
 }

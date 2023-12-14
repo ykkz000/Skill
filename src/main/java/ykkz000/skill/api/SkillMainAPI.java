@@ -20,11 +20,11 @@ package ykkz000.skill.api;
 
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import ykkz000.skill.SkillModMain;
 import ykkz000.skill.api.skill.Skill;
-import ykkz000.skill.registry.SkillRegistries;
 
-public class MainAPI {
+public class SkillMainAPI {
     public static Skill registerSkill(Identifier id, Skill skill) {
-        return Registry.register(SkillRegistries.SKILL, id, skill);
+        return Registry.register(SkillModMain.SKILL_REGISTRY, id, skill);
     }
 }

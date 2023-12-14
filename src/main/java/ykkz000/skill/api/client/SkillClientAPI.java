@@ -18,13 +18,16 @@
 
 package ykkz000.skill.api.client;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ClientAPI {
+@Environment(EnvType.CLIENT)
+public class SkillClientAPI {
     public static final Map<KeyBinding, Identifier> SKILL_BINDINGS = new HashMap<>();
     public static void bindSkill(Identifier id, KeyBinding keyBinding) {
         SKILL_BINDINGS.put(keyBinding, id);

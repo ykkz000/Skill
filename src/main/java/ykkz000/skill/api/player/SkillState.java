@@ -16,16 +16,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package ykkz000.skill.player;
+package ykkz000.skill.api.player;
 
 import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
-import ykkz000.skill.api.registry.SkillRegistries;
-import ykkz000.skill.api.skill.EmptySkill;
-
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -36,10 +32,7 @@ public class SkillState {
 
     public SkillState(Identifier id, boolean enabled) {
         this.id = id;
-    }
-
-    public int getCooldownTime() {
-        return Objects.requireNonNullElse(SkillRegistries.SKILL.get(id), EmptySkill.EMPTY).getCooldownTime();
+        this.enabled = enabled;
     }
 
     public boolean canUse() {
@@ -62,4 +55,5 @@ public class SkillState {
         state.leftCooldownTime = nbt.getInt("leftCooldownTime");
         return state;
     }
+
 }

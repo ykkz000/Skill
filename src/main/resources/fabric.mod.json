@@ -2,25 +2,36 @@
   "schemaVersion": 1,
   "id": "skill",
   "version": "${version}",
-
   "name": "Skill",
   "description": "Provide APIs to implement skills in Minecraft",
-  "authors": [],
-  "contact": {},
-
+  "authors": [
+    "ykkz000"
+  ],
+  "contact": {
+    "repo": "https://github.com/ykkz000/Skill"
+  },
   "license": "GPL-3.0",
   "icon": "assets/skill/icon.png",
-
   "environment": "*",
-  "entrypoints": {},
-
-      "mixins": [
-        "skill.mixins.json"
-      ],
-
+  "entrypoints": {
+    "client": [
+      "ykkz000.skill.client.SkillModClient"
+    ],
+    "main": [
+      "ykkz000.skill.SkillModMain"
+    ]
+  },
+  "mixins": [
+    "skill.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-        "fabric": "*",
+    "fabric": "*",
     "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/class_1657": ["ykkz000/skill/mixin/PlayerEntityMixin"]
+    }
   }
 }

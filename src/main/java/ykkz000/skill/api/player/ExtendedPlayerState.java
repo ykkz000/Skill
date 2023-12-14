@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package ykkz000.skill.player;
+package ykkz000.skill.api.player;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
@@ -27,7 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ExtendedPlayerState {
-    public final Map<Identifier, SkillState> skills;
+    private final Map<Identifier, SkillState> skills;
 
     public ExtendedPlayerState() {
         skills = new HashMap<>();
