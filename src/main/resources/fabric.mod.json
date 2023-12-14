@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "skill",
+  "version": "${version}",
+
+  "name": "Skill",
+  "description": "Provide APIs to implement skills in Minecraft",
+  "authors": [],
+  "contact": {},
+
+  "license": "GPL-3.0",
+  "icon": "assets/skill/icon.png",
+
+  "environment": "*",
+  "entrypoints": {},
+
+      "mixins": [
+        "skill.mixins.json"
+      ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+        "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
